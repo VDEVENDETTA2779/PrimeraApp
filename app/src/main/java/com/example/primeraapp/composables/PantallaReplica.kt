@@ -28,7 +28,6 @@ import com.example.primeraapp.R
 
 fun PantallaReplica(){
 
-    //Importar la imagen
     val image = painterResource(R.drawable.ironman)
 
     Column(

@@ -15,10 +15,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.example.primeraapp.composables.ContadorCafe
 import com.example.primeraapp.composables.ListaCompras
 import com.example.primeraapp.ui.theme.PrimeraAppTheme
+import androidx.compose.ui.unit.dp
+import com.example.primeraapp.composables.CafeCounter
+import com.example.primeraapp.composables.CafeCounter
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,6 +28,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             PrimeraAppTheme {
                 ListaCompras()
+                Scaffold(modifier = Modifier.padding(16.dp)) { innerPadding ->
+                    CafeCounter()
+                }
             }
         }
     }
